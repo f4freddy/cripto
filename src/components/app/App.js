@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../appbar/appbar';
-import CurrencyGrid from '../currencygrid/currencygrid' 
+import Criptolist from '../../containers/addtodo/criptolist' 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SimpleTable from '../currenlylist/currencylist';
@@ -10,7 +10,7 @@ const App = ({ match: { params } }) => {
   return (
     <MuiThemeProvider muiTheme={getMuiTheme()}>     
       <Header></Header>
-      <CurrencyGrid></CurrencyGrid>
+      <Criptolist></Criptolist>
       <Panel>
        CURRENCY
       </Panel>

@@ -1,31 +1,12 @@
 import { getApiData } from '../api/index';
 
-
-let nextTodoId = 0
-
-export function addTodo(text) {
+export function getCriptoData(text) {
   return (dispatch) => {
-    getApiData(text).then((data) => {
-      nextTodoId += parseFloat(data.values.incrementstep);
+    getApiData(text).then((data) => {   
       dispatch({
-        type: 'ADD_TODO',
-        id: nextTodoId,
-        text
+        type: 'CURRENCY_API',
+        data
       });
     });
   };
-}
-
-export const setVisibilityFilter = filter => {
-  return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-  }
-}
-
-export const toggleTodo = id => {
-  return {
-    type: 'TOGGLE_TODO',
-    id
-  }
 }
